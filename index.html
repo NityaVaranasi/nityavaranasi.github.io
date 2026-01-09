@@ -172,3 +172,131 @@
     /* Responsive */
     @media (max-width: 720px) {
       .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .avatar {
+        margin: 0 auto;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <section class="card header">
+      <img class="avatar" src="assets/profile.jpg" alt="Portrait of Nitya Varanasi" />
+
+      <div>
+        <h1>Nitya Varanasi</h1>
+        <p class="subtitle">Student | Interest in Health Sciences</p>
+
+        <p>
+          I am a high school student with a strong interest in biology, health sciences,
+          and community service. I enjoy learning through academic coursework,
+          extracurricular activities, and volunteering experiences.
+        </p>
+
+        <div class="chips">
+          <span class="chip">Biology</span>
+          <span class="chip">Health Sciences</span>
+          <span class="chip">Community Service</span>
+          <span class="chip">STEM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info & Contact -->
+    <section class="grid-2">
+      <div class="card">
+        <h2>Quick Info</h2>
+        <table>
+          <tr>
+            <th>Location</th>
+            <td>Bay Area, CA</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>California High School, San Ramon</td>
+          </tr>
+          <tr>
+            <th>Academic Interests</th>
+            <td>Biology, Chemistry, Health-related Sciences</td>
+          </tr>
+          <tr>
+            <th>Focus Areas</th>
+            <td>Learning, service, and hands-on experiences</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:contact@nityavaranasi.com">
+            contact@nityavaranasi.com
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="card">
+      <h2>Activities & Experience</h2>
+      <table>
+        <tr>
+          <th>Community Service</th>
+          <td>Volunteering and service-oriented initiatives.</td>
+        </tr>
+        <tr>
+          <th>Clubs / Leadership</th>
+          <td>Participation in school clubs and collaborative activities.</td>
+        </tr>
+        <tr>
+          <th>Programs / Projects</th>
+          <td>Science-related programs and academic projects.</td>
+        </tr>
+        <tr>
+          <th>Skills</th>
+          <td>Teamwork, communication, curiosity-driven learning.</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Photos -->
+    <section class="card">
+      <h2>Photos</h2>
+      <div class="gallery">
+        <img src="assets/volunteering.jpg" alt="Volunteering activity" />
+        <img src="assets/lab.jpg" alt="Science or lab activity" />
+        <img src="assets/community.jpg" alt="Community involvement" />
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Nitya Varanasi
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
