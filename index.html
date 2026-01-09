@@ -34,8 +34,14 @@
       padding: 28px 18px 56px;
     }
 
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     .card {
       background: var(--bg);
@@ -46,21 +52,22 @@
       margin: 14px 0;
     }
 
-    /* Header layout */
+    /* Header */
     .header {
       display: grid;
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 160px 1fr;
       gap: 18px;
       align-items: center;
     }
 
     .avatar {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 18px;
       border: 1px solid var(--border);
-      object-fit: cover;
+      object-fit: contain;
       background: var(--bg-soft);
+      padding: 6px;
     }
 
     h1 {
@@ -92,7 +99,7 @@
       color: var(--muted);
     }
 
-    /* Two-column section */
+    /* Two-column layout */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -104,9 +111,11 @@
       font-size: 18px;
     }
 
-    p { margin: 0 0 10px; }
+    p {
+      margin: 0 0 10px;
+    }
 
-    /* Table styling */
+    /* Table */
     table {
       width: 100%;
       border-collapse: separate;
@@ -118,7 +127,7 @@
     }
 
     th, td {
-      padding: 12px 12px;
+      padding: 12px;
       border-bottom: 1px solid var(--border);
       vertical-align: top;
       text-align: left;
@@ -129,10 +138,11 @@
       background: var(--bg-soft);
       color: var(--muted);
       font-weight: 600;
-      width: 34%;
+      width: 35%;
     }
 
-    tr:last-child th, tr:last-child td {
+    tr:last-child th,
+    tr:last-child td {
       border-bottom: none;
     }
 
@@ -152,13 +162,6 @@
       background: var(--bg-soft);
     }
 
-    .note {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 8px;
-    }
-
-    /* Footer */
     .footer {
       text-align: center;
       color: var(--muted);
@@ -168,122 +171,4 @@
 
     /* Responsive */
     @media (max-width: 720px) {
-      .header { grid-template-columns: 1fr; }
-      .avatar { width: 120px; height: 120px; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr; }
-      .gallery img { height: 220px; }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-
-    <!-- Header -->
-    <section class="card header">
-      <!-- Put your photo at assets/profile.jpg -->
-      <img class="avatar" src="assets/profile.jpg" alt="Portrait of Nitya Varanasi" />
-
-      <div>
-        <h1>Nitya Varanasi</h1>
-        <p class="subtitle">Student | Interest in Health Sciences</p>
-
-        <p>
-          I am a high school student with a strong interest in biology, health sciences, and community service.
-          I enjoy learning through coursework, extracurricular activities, and volunteering experiences.
-        </p>
-
-        <div class="chips">
-          <span class="chip">Biology</span>
-          <span class="chip">Health Sciences</span>
-          <span class="chip">Community Service</span>
-          <span class="chip">STEM</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Info + Contact -->
-    <section class="grid-2">
-      <div class="card">
-        <h2>Quick Info</h2>
-        <table>
-          <tr>
-            <th>Location</th>
-            <td><!-- e.g., San Jose, CA --> </td>
-          </tr>
-          <tr>
-            <th>School</th>
-            <td><!-- e.g., ABC High School --> </td>
-          </tr>
-          <tr>
-            <th>Academic Interests</th>
-            <td>Biology, Chemistry, Health-related Sciences</td>
-          </tr>
-          <tr>
-            <th>Focus Areas</th>
-            <td>Learning, service, and hands-on experiences</td>
-          </tr>
-        </table>
-        <p class="note">Tip: Keep personal details minimal (avoid phone number).</p>
-      </div>
-
-      <div class="card">
-        <h2>Contact</h2>
-        <p>
-          Email: <a href="mailto:contact@nityavaranasi.com">contact@nityavaranasi.com</a>
-        </p>
-        <p>
-          If you want, you can add a LinkedIn link later (recommended only when she has a mature profile).
-        </p>
-      </div>
-    </section>
-
-    <!-- Activities -->
-    <section class="card">
-      <h2>Activities & Experience</h2>
-      <table>
-        <tr>
-          <th>Community Service</th>
-          <td><!-- Add volunteering highlights here --></td>
-        </tr>
-        <tr>
-          <th>Clubs / Leadership</th>
-          <td><!-- Add clubs, leadership roles here --></td>
-        </tr>
-        <tr>
-          <th>Programs / Projects</th>
-          <td><!-- Add science programs, projects, competitions here --></td>
-        </tr>
-        <tr>
-          <th>Skills</th>
-          <td><!-- e.g., teamwork, communication, research writing --></td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- Photo Gallery -->
-    <section class="card">
-      <h2>Photos</h2>
-      <div class="gallery">
-        <img src="assets/volunteering.jpg" alt="Volunteering activity" />
-        <img src="assets/lab.jpg" alt="Science or lab activity" />
-        <img src="assets/community.jpg" alt="Community involvement" />
-      </div>
-      <p class="note">
-        Keep photos professional: school events, volunteering, STEM activities. Avoid anything too casual.
-      </p>
-    </section>
-
-    <div class="footer">
-      © <span id="y"></span> Nitya Varanasi
-    </div>
-
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-
+      .header {
