@@ -1,302 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Nitya Varanasi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal academic profile of Nitya Varanasi." />
-
-  <style>
-    :root {
-      --text: #1f2328;
-      --muted: #57606a;
-      --border: #d0d7de;
-      --bg: #ffffff;
-      --bg-soft: #f6f8fa;
-      --link: #0969da;
-      --shadow: 0 1px 3px rgba(31,35,40,0.08);
-      --radius: 14px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg-soft);
-      line-height: 1.6;
-    }
-
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 18px 56px;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      margin: 14px 0;
-    }
-
-    /* Header */
-    .header {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      object-fit: contain;
-      background: var(--bg-soft);
-      padding: 6px;
-    }
-
-    h1 {
-      margin: 0 0 4px;
-      font-size: 32px;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-
-    .subtitle {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .chip {
-      border: 1px solid var(--border);
-      background: var(--bg-soft);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* Two-column layout */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 18px;
-    }
-
-    p {
-      margin: 0 0 10px;
-    }
-
-    /* Table */
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--bg);
-    }
-
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-      text-align: left;
-      font-size: 14px;
-    }
-
-    th {
-      background: var(--bg-soft);
-      color: var(--muted);
-      font-weight: 600;
-      width: 35%;
-    }
-
-    tr:last-child th,
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--bg-soft);
-    }
-
-    .footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 18px;
-    }
-
-    /* Responsive */
-    @media (max-width: 720px) {
-      .header {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .avatar {
-        margin: 0 auto;
-      }
-
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery img {
-        height: 220px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in Progress</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+        }
+        p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .spinner {
+            margin: 30px auto;
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="wrap">
-
-    <!-- Header -->
-    <section class="card header">
-      <img class="avatar" src="assets/profile.jpg" alt="Portrait of Nitya Varanasi" />
-
-      <div>
-        <h1>Nitya Varanasi</h1>
-        <p class="subtitle">Student | Interest in Health Sciences</p>
-
-        <p>
-          I am a high school student with a strong interest in biology, health sciences,
-          and community service. I enjoy learning through academic coursework,
-          extracurricular activities, and volunteering experiences.
-        </p>
-
-        <div class="chips">
-          <span class="chip">Biology</span>
-          <span class="chip">Health Sciences</span>
-          <span class="chip">Community Service</span>
-          <span class="chip">STEM</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Info & Contact -->
-    <section class="grid-2">
-      <div class="card">
-        <h2>Quick Info</h2>
-        <table>
-          <tr>
-            <th>Location</th>
-            <td>Bay Area, CA</td>
-          </tr>
-          <tr>
-            <th>School</th>
-            <td>California High School, San Ramon</td>
-          </tr>
-          <tr>
-            <th>Academic Interests</th>
-            <td>Biology, Chemistry, Health-related Sciences</td>
-          </tr>
-          <tr>
-            <th>Focus Areas</th>
-            <td>Learning, service, and hands-on experiences</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="card">
-        <h2>Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:contact@nityavaranasi.com">
-            contact@nityavaranasi.com
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Activities -->
-    <section class="card">
-      <h2>Activities & Experience</h2>
-      <table>
-        <tr>
-          <th>Community Service</th>
-          <td>Volunteering and service-oriented initiatives.</td>
-        </tr>
-        <tr>
-          <th>Clubs / Leadership</th>
-          <td>Participation in school clubs and collaborative activities.</td>
-        </tr>
-        <tr>
-          <th>Programs / Projects</th>
-          <td>Science-related programs and academic projects.</td>
-        </tr>
-        <tr>
-          <th>Skills</th>
-          <td>Teamwork, communication, curiosity-driven learning.</td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- Photos -->
-    <section class="card">
-      <h2>Photos</h2>
-      <div class="gallery">
-        <img src="assets/volunteering.jpg" alt="Volunteering activity" />
-        <img src="assets/lab.jpg" alt="Science or lab activity" />
-        <img src="assets/community.jpg" alt="Community involvement" />
-      </div>
-    </section>
-
-    <div class="footer">
-      © <span id="y"></span> Nitya Varanasi
+    <div class="container">
+        <h1>🚧 Work in Progress</h1>
+        <div class="spinner"></div>
+        <p>We’re building something awesome.<br>Check back soon!</p>
+        <footer>&copy; 2026 Your Website</footer>
     </div>
-
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
